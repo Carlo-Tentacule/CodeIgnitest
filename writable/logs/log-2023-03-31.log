@@ -1,0 +1,28 @@
+ERROR - 2023-03-31 08:12:23 --> Error connecting to the database: ErrorException: Uninitialized string offset: 0 in /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/Database/MySQLi/Connection.php:85
+Stack trace:
+#0 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/Database/MySQLi/Connection.php(85): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#6 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/Model.php(165): CodeIgniter\BaseModel->findAll()
+#7 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/app/Controllers/News.php(15): CodeIgniter\Model->getNews()
+#8 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/CodeIgniter.php(934): App\Controllers\News->index()
+#9 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#10 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#11 /srv/data/web/vhosts/ehn.codeigniter.eb4solutions.fr/htdocs/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-31 08:12:23 --> Unable to connect to the database.
+Main connection [MySQLi]: Uninitialized string offset: 0
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 5 SYSTEMPATH/Model.php(165): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(15): CodeIgniter\Model->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
